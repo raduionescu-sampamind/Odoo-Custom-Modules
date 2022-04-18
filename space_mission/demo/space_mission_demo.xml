@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="awesome_spaceship" model="space.mission.spaceship">
+            <field name="name">Awesome Spaceship</field>
+            <field name="length">73.38</field>
+            <field name="width">24.93</field>
+            <field name="passenger_number">12</field>
+            <field name="ship_type">type_2</field>
+            <field name="fuel_type">bio_diesel</field>
+        </record>
+
+        <record id="big_spaceship" model="space.mission.spaceship">
+            <field name="name">Big Spaceship</field>
+            <field name="length">1248.94</field>
+            <field name="width">629.48</field>
+            <field name="passenger_number">274</field>
+            <field name="ship_type">type_3</field>
+            <field name="fuel_type">av_gas</field>
+        </record>
+
+        <record id="little_spaceship" model="space.mission.spaceship">
+            <field name="name">Little Spaceship</field>
+            <field name="length">32.84</field>
+            <field name="width">22.19</field>
+            <field name="passenger_number">5</field>
+            <field name="ship_type">type_1</field>
+            <field name="fuel_type">gasoline</field>
+        </record>
+
+        <record id="battle_spaceship" model="space.mission.spaceship">
+            <field name="name">Battle Spaceship</field>
+            <field name="length">529.77</field>
+            <field name="width">193.29</field>
+            <field name="passenger_number">82</field>
+            <field name="ship_type">type_3</field>
+            <field name="fuel_type">gas</field>
+        </record>
+
+    </data>
+</odoo>

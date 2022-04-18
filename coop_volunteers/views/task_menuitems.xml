@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- task action: window -->
+        <record id="task_action_window" model="ir.actions.act_window">
+            <field name="name">Tasks List</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">volunteers.task</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- root menu -->
+        <menuitem name="CO-OP Volunteers"
+                  id="coop_volunteers.volunteers_root_menu"
+                  sequence="1"/>
+
+        <!-- Volunteers menu -->
+        <menuitem name="Volunteers"
+                  id="coop_volunteers.volunteers_menu"
+                  sequence="2"
+                  parent="coop_volunteers.volunteers_root_menu"/>
+
+        <!-- Volunteers > Task menu -->
+        <menuitem name="Tasks"
+                  id="coop_volunteers.task_menu"
+                  sequence="3"
+                  parent="coop_volunteers.volunteers_menu"
+                  action="coop_volunteers.task_action_window"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+
+        <record id="help_task" model="volunteers.task">
+            <field name="name">Help Task</field>
+            <field name="description">Help others for free.</field>
+            <field name="start" eval="(DateTime.today() + relativedelta(months=1)).strftime('%Y-%m-%d %H:%M')"/>
+            <field name="stop" eval="(DateTime.today() + relativedelta(months=5)).strftime('%Y-%m-%d %H:%M')"/>
+            <field name="is_repeating">True</field>
+            <field name="repetition_frequency">daily</field>
+            <field name="type">type_3</field>
+        </record>
+
+        <record id="plant_tree_task" model="volunteers.task">
+            <field name="name">Plant Tree Task</field>
+            <field name="description">Plant a tree.</field>
+            <field name="start" eval="(DateTime.today())"/>
+            <field name="stop" eval="(DateTime.today() + relativedelta(days=1)).strftime('%Y-%m-%d %H:%M')"/>
+            <field name="is_repeating">False</field>
+            <field name="type">type_5</field>
+        </record>
+
+    </data>
+
+</odoo>

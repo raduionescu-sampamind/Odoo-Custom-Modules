@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="drama_book" model="library.book">
+            <field name="name">Drama Book</field>
+            <field name="publisher">Good Publisher</field>
+            <field name="year" eval="(DateTime.today() - relativedelta(years=3)).strftime('%Y-%m-%d %H:%M')"/>
+            <field name="isbn">RONSK19839200834893</field>
+            <field name="genre">drama</field>
+        </record>
+
+        <record id="mystery_book" model="library.book">
+            <field name="name">Mystery Book</field>
+            <field name="publisher">Best Publisher</field>
+            <field name="year" eval="(DateTime.today() - relativedelta(years=7)).strftime('%Y-%m-%d %H:%M')"/>
+            <field name="isbn">NEIKS91238712093892</field>
+            <field name="genre">mystery</field>
+        </record>
+
+        <record id="scifi_book" model="library.book">
+            <field name="name">Sci-Fi Book</field>
+            <field name="publisher">Bad Publisher</field>
+            <field name="year" eval="(DateTime.today() - relativedelta(years=1)).strftime('%Y-%m-%d %H:%M')"/>
+            <field name="isbn">NDKEI92830583745251</field>
+            <field name="genre">sci_fi</field>
+        </record>
+
+        <record id="contemporary_book" model="library.book">
+            <field name="name">Contemporary Book</field>
+            <field name="publisher">Almost Good Publisher</field>
+            <field name="year" eval="(DateTime.today() - relativedelta(years=4)).strftime('%Y-%m-%d %H:%M')"/>
+            <field name="isbn">AOEMD19993772223999</field>
+            <field name="genre">contemporary</field>
+        </record>
+
+        <record id="romance_book" model="library.book">
+            <field name="name">Romance Book</field>
+            <field name="publisher">Any Publisher</field>
+            <field name="year" eval="(DateTime.today() - relativedelta(years=11)).strftime('%Y-%m-%d %H:%M')"/>
+            <field name="isbn">VOEIJ39819000382801</field>
+            <field name="genre">romance</field>
+        </record>
+
+    </data>
+</odoo>

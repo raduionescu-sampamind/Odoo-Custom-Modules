@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- action: window -->
+        <record id="session_action_window" model="ir.actions.act_window">
+            <field name="name">Sessions List</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">academy.session</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- sub-menu -->
+        <menuitem name="Sessions"
+                  id="odoo_academy.session_menu"
+                  parent="odoo_academy.academy_menu"
+                  sequence="4"
+                  action="odoo_academy.session_action_window"/>
+
+    </data>
+</odoo>

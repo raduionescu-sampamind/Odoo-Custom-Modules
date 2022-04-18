@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- form view -->
+        <record id="spaceship_form_view" model="ir.ui.view">
+            <field name="name">Spaceship Form View</field>
+            <field name="model">space.mission.spaceship</field>
+            <field name="arch" type="xml">
+                <form string="Spaceship">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1>
+                                <field name="name" placeholder="Name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="active"/>
+                                <field name="passenger_number"/>
+                            </group>
+                            <group>
+                                <field name="ship_type"/>
+                                <field name="fuel_type"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Dimension">
+                                <group>
+                                    <field name="length"/>
+                                    <field name="width"/>
+                                </group>
+                            </page>
+                            <page string="Missions">
+                                <field name="mission_ids"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- tree view -->
+        <record id="spaceship_tree_view" model="ir.ui.view">
+            <field name="name">Spaceship Tree View</field>
+            <field name="model">space.mission.spaceship</field>
+            <field name="arch" type="xml">
+                <tree string="Spaceship">
+                    <field name="name"/>
+                    <field name="passenger_number"/>
+                    <field name="ship_type"/>
+                    <field name="fuel_type"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- form view -->
+        <record id="mission_form_view" model="ir.ui.view">
+            <field name="name">Mission Form View</field>
+            <field name="model">space.mission.mission</field>
+            <field name="arch" type="xml">
+                <form string="Mission">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1>
+                                <field name="name" placeholder="Title"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="launch_date"/>
+                                <field name="spaceship_id"/>
+                            </group>
+                            <group>
+                                <field name="return_date"/>
+                                <field name="crew_member_ids" widget="many2many_tags_avatar"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Crew Members">
+                                <field name="crew_member_ids"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- tree view -->
+        <record id="mission_tree_view" model="ir.ui.view">
+            <field name="name">Mission Tree View</field>
+            <field name="model">space.mission.mission</field>
+            <field name="arch" type="xml">
+                <tree string="Mission">
+                    <field name="name"/>
+                    <field name="spaceship_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- search view -->
+<!--        <record id="ModelName_search_view" model="ir.ui.view">-->
+<!--            <field name="name">ModelTitle Search View</field>-->
+<!--            <field name="model">ProjectName.ModelName</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <search string="ModelTitle">-->
+<!--                    <group expand="1" string="Group By">-->
+<!--                        <filter string="Example Field" name="example_field" domain="[]" context="{'group_by':'example_field'}"/>-->
+<!--                    </group>-->
+<!--                </search>-->
+<!--            </field>-->
+<!--        </record>-->
+
+    </data>
+</odoo>

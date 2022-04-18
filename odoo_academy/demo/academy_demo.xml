@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <record id="guitar_course" model="academy.course">
+            <field name="name">Guitar Course</field>
+            <field name="description">Learn how to play guitar.</field>
+            <field name="level">intermediate</field>
+            <field name="base_price">94.24</field>
+            <field name="additional_fee">22.75</field>
+        </record>
+
+        <record id="accounting_course" model="academy.course">
+            <field name="name">Accounting Course</field>
+            <field name="description">Learn how to do accounting.</field>
+            <field name="level">advanced</field>
+            <field name="base_price">174.83</field>
+            <field name="additional_fee">39.28</field>
+        </record>
+
+        <record id="website_course" model="academy.course">
+            <field name="name">Website Course</field>
+            <field name="description">Learn how to build a simple website.</field>
+            <field name="level">beginner</field>
+            <field name="base_price">318.38</field>
+            <field name="additional_fee">55.22</field>
+        </record>
+
+        <record id="odoo_technical_course" model="academy.course">
+            <field name="name">Odoo Technical Course</field>
+            <field name="description">Learn how to develop and customize Odoo modules.</field>
+            <field name="level">advanced</field>
+            <field name="base_price">277.49</field>
+            <field name="additional_fee">33.94</field>
+        </record>
+
+        <record id="odoo_functional_course" model="academy.course">
+            <field name="name">Odoo Functional Course</field>
+            <field name="description">Learn how to use Odoo ERP.</field>
+            <field name="level">intermediate</field>
+            <field name="base_price">214.28</field>
+            <field name="additional_fee">29.84</field>
+        </record>
+
+</odoo>

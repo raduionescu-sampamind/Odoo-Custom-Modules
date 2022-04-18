@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- book action: window -->
+        <record id="book_action_window" model="ir.actions.act_window">
+            <field name="name">Books List</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">library.book</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- root menu -->
+        <menuitem name="Library"
+                  id="library.library_root"
+                  sequence="1"/>
+
+        <!-- library menu -->
+        <menuitem name="Library"
+                  id="library.library_menu"
+                  parent="library.library_root"
+                  sequence="2"/>
+
+        <!-- book menu -->
+        <menuitem name="Books"
+                  id="library.book_list_menu"
+                  parent="library.library_menu"
+                  sequence="3"
+                  action="book_action_window"/>
+
+    </data>
+</odoo>

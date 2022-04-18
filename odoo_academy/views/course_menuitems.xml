@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- action: window -->
+        <record id="course_action_window" model="ir.actions.act_window">
+            <field name="name">Courses List</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">academy.course</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- root menu -->
+        <menuitem name="Odoo Academy"
+                  id="odoo_academy.academy_root"
+                  sequence="1"/>
+
+        <!-- menu -->
+        <menuitem name="Academy"
+                  id="odoo_academy.academy_menu"
+                  parent="odoo_academy.academy_root"
+                  sequence="2"/>
+
+        <!-- sub-menu -->
+        <menuitem name="Courses"
+                  id="odoo_academy.course_menu"
+                  parent="odoo_academy.academy_menu"
+                  action="course_action_window"
+                  sequence="3"/>
+
+    </data>
+</odoo>

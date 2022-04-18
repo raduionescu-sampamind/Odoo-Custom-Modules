@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- form view -->
+        <record id="course_form_view" model="ir.ui.view">
+            <field name="name">Course Form View</field>
+            <field name="model">academy.course</field>
+            <field name="arch" type="xml">
+                <form string="Course">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1>
+                                <field name="name" placeholder="Title"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="level"/>
+                            </group>
+                            <group>
+                                <field name="active"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Sessions">
+                                <field name="session_ids"/>
+                            </page>
+                            <page string="Pricing">
+                                <group>
+                                    <field name="base_price"/>
+                                    <field name="additional_fee"/>
+                                    <field name="total_price" force_save="1"/>
+                                </group>
+                            </page>
+                            <page string="Description">
+                                <group>
+                                    <field name="description"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- tree view -->
+        <record id="course_tree_view" model="ir.ui.view">
+            <field name="name">Course Tree View</field>
+            <field name="model">academy.course</field>
+            <field name="arch" type="xml">
+                <tree string="Courses">
+                    <field name="name"/>
+                    <field name="level"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

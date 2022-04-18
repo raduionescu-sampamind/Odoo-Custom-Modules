@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_volunteers_administrator,Access volunteers administrator,model_volunteers_task,group_volunteers_administrator,1,1,1,1
+access_volunteers_user,Access volunteers user,model_volunteers_task,,1,0,0,0

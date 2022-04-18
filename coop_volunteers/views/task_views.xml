@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- task form view -->
+        <record id="task_form_view" model="ir.ui.view">
+            <field name="name">Task form view</field>
+            <field name="model">volunteers.task</field>
+            <field name="arch" type="xml">
+                <form string="Task">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1>
+                                <field name="name" placeholder="Name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="state"/>
+                                <field name="leader"/>
+                                <field name="start"/>
+                                <field name="stop"/>
+                            </group>
+                            <group>
+                                <field name="type"/>
+                                <field name="is_repeating"/>
+                                <field name="repetition_frequency" attrs="{'invisible': [('is_repeating', '=', False)]}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Description">
+                                <group>
+                                    <field name="description"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- task tree view -->
+        <record id="task_tree_view" model="ir.ui.view">
+            <field name="name">Task tree view</field>
+            <field name="model">volunteers.task</field>
+            <field name="arch" type="xml">
+                <tree string="ModelTitle">
+                    <field name="name"/>
+                    <field name="type"/>
+                    <field name="start"/>
+                    <field name="stop"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

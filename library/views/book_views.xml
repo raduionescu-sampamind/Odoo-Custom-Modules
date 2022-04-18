@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- book form view -->
+        <record id="book_form_view" model="ir.ui.view">
+            <field name="name">Book form view</field>
+            <field name="model">library.book</field>
+            <field name="arch" type="xml">
+                <form string="Books">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1>
+                                <field name="name" placeholder="Title"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="publisher"/>
+                            </group>
+                            <group>
+                                <field name="genre"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <field name="year"/>
+                                    <field name="isbn"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- book tree view -->
+        <record id="book_tree_view" model="ir.ui.view">
+            <field name="name">Book tree view</field>
+            <field name="model">library.book</field>
+            <field name="arch" type="xml">
+                <tree string="Books">
+                    <field name="name"/>
+                    <field name="genre"/>
+                    <field name="year"/>
+                    <field name="publisher"/>
+                    <field name="isbn"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

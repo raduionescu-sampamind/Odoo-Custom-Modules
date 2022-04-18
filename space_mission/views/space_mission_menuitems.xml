@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- action: spaceship_action_window -->
+        <record id="spaceship_action_window" model="ir.actions.act_window">
+            <field name="name">Spaceships List</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">space.mission.spaceship</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- action: mission_action_window -->
+        <record id="mission_action_window" model="ir.actions.act_window">
+            <field name="name">Missions List</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">space.mission.mission</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- root-menu -->
+        <menuitem name="Space Mission"
+                  id="space_mission_root"
+                  sequence="1"/>
+
+        <!-- main-menu -->
+        <menuitem name="Space Mission"
+                  id="space_mission_main"
+                  parent="space_mission_root"
+                  sequence="2"/>
+
+        <!-- sub-menu -->
+        <menuitem name="Spaceships"
+                  id="spaceship_menu"
+                  parent="space_mission_main"
+                  sequence="3"
+                  action="space_mission.spaceship_action_window"/>
+
+        <!-- sub-menu -->
+        <menuitem name="Missions"
+                  id="mission_menu"
+                  parent="space_mission_main"
+                  sequence="4"
+                  action="space_mission.mission_action_window"/>
+
+    </data>
+</odoo>
